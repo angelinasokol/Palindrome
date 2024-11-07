@@ -26,6 +26,13 @@ class MainActivity : AppCompatActivity() {
                 viewOutput.text = "ОШИБКА! Введите строку для проверки."
                 return@setOnClickListener
             }
+            val result = isPalindrome(inputText)
+
+            viewOutput.text = if (result) {
+                "Строка является палиндромом! :)"
+            } else {
+                "Строка не является палиндромом"
+            }
         }
     }
     private fun isPalindrome(text: String): Boolean {
