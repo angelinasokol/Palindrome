@@ -18,5 +18,15 @@ class MainActivity : AppCompatActivity() {
         val viewOutput: TextView = findViewById(R.id.viewOutput)
         val button: Button = findViewById(R.id.button)
         val stringInput: EditText = findViewById(R.id.stringInput)
+
+        button.setOnClickListener {
+            val inputText = stringInput.text.toString()
+
+            if(inputText.isBlank()) {
+                viewOutput.text = "ОШИБКА! Введите строку для проверки."
+                return@setOnClickListener
+            }
+        }
     }
+
 }
