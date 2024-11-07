@@ -28,5 +28,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+    private fun isPalindrome(text: String): Boolean {
+        val cleanedText = text.filter {it.isLetter()}.lowercase()
+        return cleanedText == cleanedText.reversed()
+    }
 }
